@@ -47,31 +47,6 @@ def render_data_model(nodes: list[Node], edges: list[Edge]):
     """
     Takes in Node and Edge data thats vizualizes some erd diagram. ask user information to make sure you get all relevenat information before 
     attempting to render the data model.
-    
-    Sample  below
-
-     "nodes": [
-        {
-            "id": "customer",
-            "data": {
-                "label": "Customer"
-            }
-        },
-        {
-            "id": "order",
-            "data": {
-                "label": "Order"
-            }
-        }
-    ],
-    "edges": [
-        {
-            "id": "customer-order",
-            "source": "customer",
-            "target": "order"
-        }
-    ]
-
     """
 
     structured = {
