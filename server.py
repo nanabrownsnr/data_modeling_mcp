@@ -6,7 +6,6 @@ from starlette.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from pathlib import Path
 from typing import Any, Optional
-import requests
 
 mcp = FastMCP(
     "data_modeling_mcp"
@@ -23,13 +22,11 @@ VIEW_HTML = (
 
 @mcp.resource(
     VIEW_URI,
-    app=AppConfig(...)
+    app=AppConfig()
 )
 def data_model_view():
     return VIEW_HTML
 
-
-sample_data 
 
 
 @mcp.tool(
@@ -72,7 +69,7 @@ def render_data_model():
     )
 
 
-    middleware = [
+middleware = [
     Middleware(
         CORSMiddleware,
         allow_origins=["*"],
