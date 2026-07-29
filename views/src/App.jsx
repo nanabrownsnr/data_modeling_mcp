@@ -7,6 +7,8 @@ import {
     Background,
     Controls,
     MiniMap,
+    useNodesState,
+    useEdgesState,
 } from "@xyflow/react";
 
 import { layoutGraph } from "./layout";
@@ -14,8 +16,8 @@ import { layoutGraph } from "./layout";
 
 export default function App() {
     
-    const [nodes, setNodes] = useState([]);
-    const [edges, setEdges] = useState([]);
+    const [nodes, setNodes, onNodesChange] = useNodesState([]);
+    const [edges, setEdges, onEdgesChange] = useEdgesState([]);
 
     useEffect(() => {
 
@@ -46,6 +48,8 @@ export default function App() {
             <ReactFlow
                 nodes={nodes}
                 edges={edges}
+                onNodesChange={onNodesChange}
+                onEdgesChange={onEdgesChange}
                 fitView
             >
                 <Background/>
