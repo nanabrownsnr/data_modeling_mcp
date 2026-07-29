@@ -44,9 +44,24 @@ def data_model_view():
     app=AppConfig(resource_uri=VIEW_URI)
 )
 def render_data_model(nodes: list[Node], edges: list[Edge]):
-    """
-    Takes in Node and Edge data thats vizualizes some erd diagram. ask user information to make sure you get all relevenat information before 
-    attempting to render the data model.
+  """
+    Render an entity-relationship style data model on the data modeling canvas.
+
+    This tool accepts a list of nodes and edges that describe a graph and
+    forwards them to the front-end view for visualization. Each node
+    represents an entity (for example, a table or domain object) and each
+    edge represents a relationship between two entities.
+
+    Parameters
+    ----------
+    nodes : list[Node]
+        The nodes to render. Each node must have a unique `id` and a `data`
+        payload containing at least a `label` field used as the display name
+        in the diagram.
+        
+    edges : list[Edge]
+        The edges to render. Each edge must have a unique `id`, a `source`
+        node ID, and a `target` node ID that reference existing nodes.
     """
 
     structured = {
