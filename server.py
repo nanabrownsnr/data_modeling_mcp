@@ -10,21 +10,14 @@ from typing import Any, Optional
 class NodeData(BaseModel):
     label: str
 
-
 class Node(BaseModel):
     id: str
     data: NodeData
-
 
 class Edge(BaseModel):
     id: str
     source: str
     target: str
-
-
-
-
-
 
 mcp = FastMCP(
     "data_modeling_mcp"
@@ -47,11 +40,10 @@ def data_model_view():
     return VIEW_HTML
 
 
-
 @mcp.tool(
     app=AppConfig(resource_uri=VIEW_URI)
 )
-def render_data_model(nodes: list[Node],edges: list[Edge]):
+def render_data_model(nodes: list[Node], edges: list[Edge]):
     """
     Takes in Node and Edge data thats vizualizes some erd diagram. ask user information to make sure you get all relevenat information before 
     attempting to render the data model.
@@ -83,8 +75,8 @@ def render_data_model(nodes: list[Node],edges: list[Edge]):
     """
 
     structured = {
-        "nodes": nodes,
-        "edges": edges
+        "nodes": [n.model_dump() for n in nodes],
+        "edges": [e.model_dump() for e in edges]
     }
 
 
@@ -93,7 +85,6 @@ def render_data_model(nodes: list[Node],edges: list[Edge]):
         structured_content=structured,
         meta={"ui": {"resourceUri": VIEW_URI}, "ui/resourceUri": VIEW_URI}
     )
-
 
 middleware = [
     Middleware(
@@ -104,6 +95,7 @@ middleware = [
         expose_headers=["mcp-session-id"],
     )
 ]
+
 app = mcp.http_app(middleware=middleware)
 
 if __name__ == "__main__":
