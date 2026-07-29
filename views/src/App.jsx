@@ -9,13 +9,13 @@ import {
     MiniMap,
 } from "@xyflow/react";
 
+import { layoutGraph } from "./layout";
+
 
 export default function App() {
     
-
     const [nodes, setNodes] = useState([]);
     const [edges, setEdges] = useState([]);
-
 
     useEffect(() => {
 
@@ -24,12 +24,15 @@ export default function App() {
             version: "1.0.0"
         });
 
-        app.ontoolresult = (result) => {
-
-            console.log("MCP RESULT:", result);
-
-            setNodes(result.structuredContent?.nodes ?? []);
-            setEdges(result.structuredContent?.edges ?? []);
+        app.ontoolresult = async (result) => {
+            
+            const structured = await layoutGraph(
+                result.structuredContent.nodes,
+                result.structuredContent.edges
+            );
+        
+            setNodes(structured.nodes);
+            setEdges(structured.edges);
 
         };
 
