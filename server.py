@@ -44,7 +44,7 @@ def data_model_view():
     app=AppConfig(resource_uri=VIEW_URI)
 )
 def render_data_model(nodes: list[Node], edges: list[Edge]):
-  """
+    """
     Render an entity-relationship style data model on the data modeling canvas.
 
     This tool accepts a list of nodes and edges that describe a graph and
@@ -58,7 +58,7 @@ def render_data_model(nodes: list[Node], edges: list[Edge]):
         The nodes to render. Each node must have a unique `id` and a `data`
         payload containing at least a `label` field used as the display name
         in the diagram.
-        
+
     edges : list[Edge]
         The edges to render. Each edge must have a unique `id`, a `source`
         node ID, and a `target` node ID that reference existing nodes.
