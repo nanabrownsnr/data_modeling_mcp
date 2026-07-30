@@ -1,4 +1,5 @@
-from fastmcp import FastMCP, AppConfig, ResourceCSP
+from fastmcp import FastMCP
+from fastmcp.apps import AppConfig, ResourceCSP
 from fastmcp.tools import ToolResult
 
 from starlette.middleware import Middleware
