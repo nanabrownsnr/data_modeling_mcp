@@ -1,8 +1,9 @@
-from fastmcp import FastMCP
-from fastmcp.apps import AppConfig, ResourceCSP
+from fastmcp import FastMCP, AppConfig, ResourceCSP
 from fastmcp.tools import ToolResult
+
 from starlette.middleware import Middleware
 from starlette.middleware.cors import CORSMiddleware
+
 from pydantic import BaseModel
 from pathlib import Path
 from typing import Any, Optional
@@ -72,8 +73,8 @@ def render_data_model(nodes: list[Node], edges: list[Edge]):
 
     return ToolResult(
         content=f"rendered this data on the canvas: {structured}",
-        structured_content=structured,
-        meta={"ui": {"resourceUri": VIEW_URI}, "ui/resourceUri": VIEW_URI}
+        structured_content=structured
+        # meta={"ui": {"resourceUri": VIEW_URI}, "ui/resourceUri": VIEW_URI}
     )
 
 middleware = [
@@ -81,8 +82,9 @@ middleware = [
         CORSMiddleware,
         allow_origins=["*"],
         allow_methods=["GET", "POST", "DELETE", "OPTIONS"],
-        allow_headers=["mcp-protocol-version", "mcp-session-id", "Authorization", "Content-Type"],
-        expose_headers=["mcp-session-id"],
+        allow_headers=["mcp-protocol-version", "Authorization", "Content-Type"]
+        # allow_headers=["mcp-protocol-version", "mcp-session-id", "Authorization", "Content-Type"],
+        # expose_headers=["mcp-session-id"],
     )
 ]
 
