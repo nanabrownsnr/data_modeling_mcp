@@ -8,6 +8,6 @@ def get_auth_provider() -> JWTVerifier:
         f"/{settings.ACCOUNT_SERVICE_JWKS_ENDPOINT.lstrip('/')}"
     )
     return JWTVerifier(
-        jwks_uri=jwks_url,
-        audience=settings.SERVICE_ID,
+        jwks_uri=jwks_url
+        # audience=settings.SERVICE_ID,
     )
