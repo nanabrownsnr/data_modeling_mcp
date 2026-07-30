@@ -1,4 +1,3 @@
-
 import asyncio
 
 from starlette.middleware import Middleware
@@ -16,7 +15,6 @@ from app.tools.render_data_model_tool import register_tools
 from app.resources.view_resource import register_resources
 from app.twynity import register_routes
 from app.usage import save_usage_report
-
 
 @asynccontextmanager
 async def app_lifespan(server):
@@ -47,10 +45,20 @@ register_resources(mcp)
 register_routes(mcp)
 
 
+match settings.ENVIRONMENT:
+    case "development":
+        origins = ["*"]
+    case "staging":
+        origins = ["https://staging.twynity.ai", "https://twynity-staging.mis.4th-ir.com"]
+    case "production":
+        origins = ["https://twynity.ai", "https://twynity.mis.4th-ir.com"]
+    case _:
+        origins = ["*"]
+
 middleware = [
     Middleware(
         CORSMiddleware,
-        allow_origins=["https://twynity.ai","https://staging.twynity.ai", "https://dev.twynity.ai","https://twynity-staging.mis.4th-ir.com"],
+        allow_origins=origins,
         allow_methods=["GET", "POST", "DELETE", "OPTIONS"],
         allow_headers=["mcp-protocol-version", "mcp-session-id", "Authorization", "Content-Type"],
         expose_headers=["mcp-session-id"],

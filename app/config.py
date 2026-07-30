@@ -38,7 +38,7 @@ class Settings(BaseSettings):
     SERVICE_ID: str = "data_modeling_mcp"
     APP_TITLE: str = "Data Modeling MCP"
     APP_VERSION: str = "1.0.0"
-    ENVIRONMENT: str = "development" # development | staging | production
+    ENVIRONMENT: str = os.getenv("ENVIRONMENT","development") # development | staging | production
     API_V1_STR: str = "/api/v1"
     ALLOWED_ORIGINS: str = "*"
     RELEASE_ID: str = "1.0.0"

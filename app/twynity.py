@@ -9,11 +9,6 @@ def register_routes(mcp):
         return JSONResponse({
             "name": settings.APP_TITLE,
             "version": settings.APP_VERSION
-            # "external_connections": {
-            #     "oauth": None,
-            #     "api_key": None,
-            #     "project": None,
-            # },
         })
 
     @mcp.custom_route("/api/v1/external-connection/me", methods=["GET"])

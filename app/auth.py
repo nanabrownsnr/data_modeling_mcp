@@ -9,5 +9,4 @@ def get_auth_provider() -> JWTVerifier:
     )
     return JWTVerifier(
         jwks_uri=jwks_url
-        # audience=settings.SERVICE_ID,
     )
