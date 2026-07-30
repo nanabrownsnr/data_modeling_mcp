@@ -1,2 +1,3 @@
-views/node_modules/
-.datavenv
+app/resources/views/node_modules/
+.datavenv/
+.env

@@ -1,0 +1,7 @@
+2026-07-30 18:33:54,313 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2026-07-30 18:33:55,933 - httpx - INFO - HTTP Request: POST https://twynity-staging.api.4th-ir.com/license-server/api/v1/activations "HTTP/1.1 200 OK"
+2026-07-30 18:33:56,543 - httpx - INFO - HTTP Request: GET https://twynity-staging.api.4th-ir.com/license-server/.well-known/jwks.json "HTTP/1.1 200 OK"
+2026-07-30 18:33:56,544 - app.license - INFO - Using key kid=4th-ir-license-key-1
+2026-07-30 18:33:56,556 - app.license - INFO - License check passed.
+2026-07-30 18:37:16,474 - httpx - INFO - HTTP Request: GET https://twynity-staging.api.4th-ir.com/account "HTTP/1.1 307 Temporary Redirect"
+2026-07-30 18:37:38,737 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager shutting down
