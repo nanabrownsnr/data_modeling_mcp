@@ -75,7 +75,7 @@ def render_data_model(nodes: list[Node], edges: list[Edge]):
     return ToolResult(
         content=f"rendered this data on the canvas: {structured}",
         structured_content=structured,
-        meta={"ui": {"resourceUri": VIEW_URI}, "ui/resourceUri": VIEW_URI}
+        meta={"ui": {"resourceUri": VIEW_URI}}
     )
 
 middleware = [
@@ -83,9 +83,8 @@ middleware = [
         CORSMiddleware,
         allow_origins=["*"],
         allow_methods=["GET", "POST", "DELETE", "OPTIONS"],
-        allow_headers=["mcp-protocol-version", "Authorization", "Content-Type"]
-        # allow_headers=["mcp-protocol-version", "mcp-session-id", "Authorization", "Content-Type"],
-        # expose_headers=["mcp-session-id"],
+        allow_headers=["mcp-protocol-version", "mcp-session-id", "Authorization", "Content-Type"],
+        expose_headers=["mcp-session-id"]
     )
 ]
 
