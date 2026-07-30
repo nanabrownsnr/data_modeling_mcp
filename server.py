@@ -74,8 +74,8 @@ def render_data_model(nodes: list[Node], edges: list[Edge]):
 
     return ToolResult(
         content=f"rendered this data on the canvas: {structured}",
-        structured_content=structured
-        # meta={"ui": {"resourceUri": VIEW_URI}, "ui/resourceUri": VIEW_URI}
+        structured_content=structured,
+        meta={"ui": {"resourceUri": VIEW_URI}, "ui/resourceUri": VIEW_URI}
     )
 
 middleware = [
