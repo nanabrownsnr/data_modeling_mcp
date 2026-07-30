@@ -50,7 +50,7 @@ register_routes(mcp)
 middleware = [
     Middleware(
         CORSMiddleware,
-        allow_origins=["https://staging.twynity.ai", "https://dev.twynity.ai"],
+        allow_origins=["https://twynity.ai","https://staging.twynity.ai", "https://dev.twynity.ai","https://twynity-staging.mis.4th-ir.com"],
         allow_methods=["GET", "POST", "DELETE", "OPTIONS"],
         allow_headers=["mcp-protocol-version", "mcp-session-id", "Authorization", "Content-Type"],
         expose_headers=["mcp-session-id"],
