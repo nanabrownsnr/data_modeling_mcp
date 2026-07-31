@@ -1,74 +1,124 @@
-2026-07-30 18:23:46,644 - mcp.server.lowlevel.server - DEBUG - Initializing server 'Data Modeling MCP'
-2026-07-30 18:23:46,644 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListToolsRequest
-2026-07-30 18:23:46,645 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourcesRequest
-2026-07-30 18:23:46,645 - mcp.server.lowlevel.server - DEBUG - Registering handler for PromptListRequest
-2026-07-30 18:23:46,645 - mcp.server.lowlevel.server - DEBUG - Registering handler for CallToolRequest
-2026-07-30 18:23:46,645 - mcp.server.lowlevel.server - DEBUG - Registering handler for SetLevelRequest
-2026-07-30 18:32:03,107 - mcp.server.lowlevel.server - DEBUG - Initializing server 'Data Modeling MCP'
-2026-07-30 18:32:03,108 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListToolsRequest
-2026-07-30 18:32:03,108 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourcesRequest
-2026-07-30 18:32:03,108 - mcp.server.lowlevel.server - DEBUG - Registering handler for PromptListRequest
-2026-07-30 18:32:03,108 - mcp.server.lowlevel.server - DEBUG - Registering handler for CallToolRequest
-2026-07-30 18:32:03,108 - mcp.server.lowlevel.server - DEBUG - Registering handler for SetLevelRequest
-2026-07-30 18:33:54,230 - mcp.server.lowlevel.server - DEBUG - Initializing server 'Data Modeling MCP'
-2026-07-30 18:33:54,230 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListToolsRequest
-2026-07-30 18:33:54,230 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourcesRequest
-2026-07-30 18:33:54,231 - mcp.server.lowlevel.server - DEBUG - Registering handler for PromptListRequest
-2026-07-30 18:33:54,231 - mcp.server.lowlevel.server - DEBUG - Registering handler for CallToolRequest
-2026-07-30 18:33:54,231 - mcp.server.lowlevel.server - DEBUG - Registering handler for SetLevelRequest
-2026-07-30 18:33:54,250 - asyncio - DEBUG - Using selector: EpollSelector
-2026-07-30 18:33:54,313 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
-2026-07-30 18:33:54,313 - httpcore.connection - DEBUG - connect_tcp.started host='twynity-staging.api.4th-ir.com' port=443 local_address=None timeout=5.0 socket_options=None
-2026-07-30 18:33:54,520 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7c020b7f6510>
-2026-07-30 18:33:54,521 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7c020b80f9b0> server_hostname='twynity-staging.api.4th-ir.com' timeout=5.0
-2026-07-30 18:33:54,721 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7c020b79a5d0>
-2026-07-30 18:33:54,723 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
-2026-07-30 18:33:54,724 - httpcore.http11 - DEBUG - send_request_headers.complete
-2026-07-30 18:33:54,724 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
-2026-07-30 18:33:54,725 - httpcore.http11 - DEBUG - send_request_body.complete
-2026-07-30 18:33:54,725 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
-2026-07-30 18:33:55,931 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Length', b'1207'), (b'Content-Type', b'application/json'), (b'Date', b'Thu, 30 Jul 2026 18:33:54 GMT'), (b'Server', b'uvicorn')])
-2026-07-30 18:33:55,933 - httpx - INFO - HTTP Request: POST https://twynity-staging.api.4th-ir.com/license-server/api/v1/activations "HTTP/1.1 200 OK"
-2026-07-30 18:33:55,934 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
-2026-07-30 18:33:55,935 - httpcore.http11 - DEBUG - receive_response_body.complete
-2026-07-30 18:33:55,936 - httpcore.http11 - DEBUG - response_closed.started
-2026-07-30 18:33:55,936 - httpcore.http11 - DEBUG - response_closed.complete
-2026-07-30 18:33:55,937 - httpcore.connection - DEBUG - close.started
-2026-07-30 18:33:55,938 - httpcore.connection - DEBUG - close.complete
-2026-07-30 18:33:55,964 - httpcore.connection - DEBUG - connect_tcp.started host='twynity-staging.api.4th-ir.com' port=443 local_address=None timeout=5.0 socket_options=None
-2026-07-30 18:33:56,157 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7c020b6a4690>
-2026-07-30 18:33:56,157 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7c020b80d490> server_hostname='twynity-staging.api.4th-ir.com' timeout=5.0
-2026-07-30 18:33:56,352 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7c020b792520>
-2026-07-30 18:33:56,354 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'GET']>
-2026-07-30 18:33:56,354 - httpcore.http11 - DEBUG - send_request_headers.complete
-2026-07-30 18:33:56,355 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'GET']>
-2026-07-30 18:33:56,355 - httpcore.http11 - DEBUG - send_request_body.complete
-2026-07-30 18:33:56,355 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
-2026-07-30 18:33:56,542 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Length', b'439'), (b'Content-Type', b'application/json'), (b'Date', b'Thu, 30 Jul 2026 18:33:56 GMT'), (b'Server', b'uvicorn')])
-2026-07-30 18:33:56,543 - httpx - INFO - HTTP Request: GET https://twynity-staging.api.4th-ir.com/license-server/.well-known/jwks.json "HTTP/1.1 200 OK"
-2026-07-30 18:33:56,543 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'GET']>
-2026-07-30 18:33:56,543 - httpcore.http11 - DEBUG - receive_response_body.complete
-2026-07-30 18:33:56,543 - httpcore.http11 - DEBUG - response_closed.started
-2026-07-30 18:33:56,544 - httpcore.http11 - DEBUG - response_closed.complete
-2026-07-30 18:33:56,544 - httpcore.connection - DEBUG - close.started
-2026-07-30 18:33:56,544 - httpcore.connection - DEBUG - close.complete
-2026-07-30 18:33:56,544 - app.license - INFO - Using key kid=4th-ir-license-key-1
-2026-07-30 18:33:56,556 - app.license - INFO - License check passed.
-2026-07-30 18:37:15,897 - httpcore.connection - DEBUG - connect_tcp.started host='twynity-staging.api.4th-ir.com' port=443 local_address=None timeout=10.0 socket_options=None
-2026-07-30 18:37:16,088 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7c020b793950>
-2026-07-30 18:37:16,089 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7c020b7a9090> server_hostname='twynity-staging.api.4th-ir.com' timeout=10.0
-2026-07-30 18:37:16,285 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7c020b661b50>
-2026-07-30 18:37:16,286 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'GET']>
-2026-07-30 18:37:16,287 - httpcore.http11 - DEBUG - send_request_headers.complete
-2026-07-30 18:37:16,287 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'GET']>
-2026-07-30 18:37:16,288 - httpcore.http11 - DEBUG - send_request_body.complete
-2026-07-30 18:37:16,288 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
-2026-07-30 18:37:16,474 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'Content-Length', b'0'), (b'Date', b'Thu, 30 Jul 2026 18:37:15 GMT'), (b'Location', b'/account/docs'), (b'Server', b'uvicorn')])
-2026-07-30 18:37:16,474 - httpx - INFO - HTTP Request: GET https://twynity-staging.api.4th-ir.com/account "HTTP/1.1 307 Temporary Redirect"
-2026-07-30 18:37:16,476 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'GET']>
-2026-07-30 18:37:16,476 - httpcore.http11 - DEBUG - receive_response_body.complete
-2026-07-30 18:37:16,477 - httpcore.http11 - DEBUG - response_closed.started
-2026-07-30 18:37:16,477 - httpcore.http11 - DEBUG - response_closed.complete
-2026-07-30 18:37:16,478 - httpcore.connection - DEBUG - close.started
-2026-07-30 18:37:16,479 - httpcore.connection - DEBUG - close.complete
-2026-07-30 18:37:38,737 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager shutting down
+2026-07-31 00:01:24,808 - mcp.server.lowlevel.server - DEBUG - Initializing server 'test_server'
+2026-07-31 00:01:24,809 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListToolsRequest
+2026-07-31 00:01:24,809 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourcesRequest
+2026-07-31 00:01:24,810 - mcp.server.lowlevel.server - DEBUG - Registering handler for PromptListRequest
+2026-07-31 00:01:24,810 - mcp.server.lowlevel.server - DEBUG - Registering handler for CallToolRequest
+2026-07-31 00:01:24,810 - mcp.server.lowlevel.server - DEBUG - Registering handler for SetLevelRequest
+2026-07-31 00:01:24,812 - asyncio - DEBUG - Using selector: EpollSelector
+2026-07-31 00:01:24,814 - httpx2 - INFO - HTTP Request: GET http://testserver/api/v1/external-connection/me "HTTP/1.1 200 OK"
+2026-07-31 00:01:24,893 - mcp.server.lowlevel.server - DEBUG - Initializing server 'test_server'
+2026-07-31 00:01:24,893 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListToolsRequest
+2026-07-31 00:01:24,893 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourcesRequest
+2026-07-31 00:01:24,894 - mcp.server.lowlevel.server - DEBUG - Registering handler for PromptListRequest
+2026-07-31 00:01:24,894 - mcp.server.lowlevel.server - DEBUG - Registering handler for CallToolRequest
+2026-07-31 00:01:24,894 - mcp.server.lowlevel.server - DEBUG - Registering handler for SetLevelRequest
+2026-07-31 00:01:24,895 - asyncio - DEBUG - Using selector: EpollSelector
+2026-07-31 00:01:24,897 - httpx2 - INFO - HTTP Request: GET http://testserver/api/v1/external-connection/me "HTTP/1.1 200 OK"
+2026-07-31 00:01:24,902 - mcp.server.lowlevel.server - DEBUG - Initializing server 'test_server'
+2026-07-31 00:01:24,902 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListToolsRequest
+2026-07-31 00:01:24,903 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourcesRequest
+2026-07-31 00:01:24,903 - mcp.server.lowlevel.server - DEBUG - Registering handler for PromptListRequest
+2026-07-31 00:01:24,903 - mcp.server.lowlevel.server - DEBUG - Registering handler for CallToolRequest
+2026-07-31 00:01:24,903 - mcp.server.lowlevel.server - DEBUG - Registering handler for SetLevelRequest
+2026-07-31 00:01:24,909 - asyncio - DEBUG - Using selector: EpollSelector
+2026-07-31 00:01:24,914 - mcp.server.lowlevel.server - DEBUG - Initializing server 'test_server'
+2026-07-31 00:01:24,914 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListToolsRequest
+2026-07-31 00:01:24,914 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourcesRequest
+2026-07-31 00:01:24,914 - mcp.server.lowlevel.server - DEBUG - Registering handler for PromptListRequest
+2026-07-31 00:01:24,914 - mcp.server.lowlevel.server - DEBUG - Registering handler for CallToolRequest
+2026-07-31 00:01:24,915 - mcp.server.lowlevel.server - DEBUG - Registering handler for SetLevelRequest
+2026-07-31 00:01:24,916 - asyncio - DEBUG - Using selector: EpollSelector
+2026-07-31 00:01:24,917 - httpx2 - INFO - HTTP Request: GET http://testserver/api/v1/.well-known/mcp.json "HTTP/1.1 200 OK"
+2026-07-31 00:01:24,922 - mcp.server.lowlevel.server - DEBUG - Initializing server 'test_server'
+2026-07-31 00:01:24,923 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListToolsRequest
+2026-07-31 00:01:24,923 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourcesRequest
+2026-07-31 00:01:24,923 - mcp.server.lowlevel.server - DEBUG - Registering handler for PromptListRequest
+2026-07-31 00:01:24,923 - mcp.server.lowlevel.server - DEBUG - Registering handler for CallToolRequest
+2026-07-31 00:01:24,924 - mcp.server.lowlevel.server - DEBUG - Registering handler for SetLevelRequest
+2026-07-31 00:01:24,925 - asyncio - DEBUG - Using selector: EpollSelector
+2026-07-31 00:01:24,927 - httpx2 - INFO - HTTP Request: GET http://testserver/api/v1/health "HTTP/1.1 200 OK"
+2026-07-31 00:10:52,893 - mcp.server.lowlevel.server - DEBUG - Initializing server 'test_server'
+2026-07-31 00:10:52,894 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListToolsRequest
+2026-07-31 00:10:52,895 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourcesRequest
+2026-07-31 00:10:52,895 - mcp.server.lowlevel.server - DEBUG - Registering handler for PromptListRequest
+2026-07-31 00:10:52,895 - mcp.server.lowlevel.server - DEBUG - Registering handler for CallToolRequest
+2026-07-31 00:10:52,896 - mcp.server.lowlevel.server - DEBUG - Registering handler for SetLevelRequest
+2026-07-31 00:10:52,900 - asyncio - DEBUG - Using selector: EpollSelector
+2026-07-31 00:10:52,903 - httpx2 - INFO - HTTP Request: GET http://testserver/api/v1/external-connection/me "HTTP/1.1 404 Not Found"
+2026-07-31 00:10:53,009 - mcp.server.lowlevel.server - DEBUG - Initializing server 'test_server'
+2026-07-31 00:10:53,009 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListToolsRequest
+2026-07-31 00:10:53,010 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourcesRequest
+2026-07-31 00:10:53,010 - mcp.server.lowlevel.server - DEBUG - Registering handler for PromptListRequest
+2026-07-31 00:10:53,010 - mcp.server.lowlevel.server - DEBUG - Registering handler for CallToolRequest
+2026-07-31 00:10:53,010 - mcp.server.lowlevel.server - DEBUG - Registering handler for SetLevelRequest
+2026-07-31 00:10:53,011 - asyncio - DEBUG - Using selector: EpollSelector
+2026-07-31 00:10:53,012 - httpx2 - INFO - HTTP Request: GET http://testserver/api/v1/external-connection/me "HTTP/1.1 404 Not Found"
+2026-07-31 00:10:53,016 - mcp.server.lowlevel.server - DEBUG - Initializing server 'test_server'
+2026-07-31 00:10:53,016 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListToolsRequest
+2026-07-31 00:10:53,016 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourcesRequest
+2026-07-31 00:10:53,016 - mcp.server.lowlevel.server - DEBUG - Registering handler for PromptListRequest
+2026-07-31 00:10:53,016 - mcp.server.lowlevel.server - DEBUG - Registering handler for CallToolRequest
+2026-07-31 00:10:53,016 - mcp.server.lowlevel.server - DEBUG - Registering handler for SetLevelRequest
+2026-07-31 00:10:53,020 - asyncio - DEBUG - Using selector: EpollSelector
+2026-07-31 00:10:53,025 - mcp.server.lowlevel.server - DEBUG - Initializing server 'test_server'
+2026-07-31 00:10:53,025 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListToolsRequest
+2026-07-31 00:10:53,025 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourcesRequest
+2026-07-31 00:10:53,026 - mcp.server.lowlevel.server - DEBUG - Registering handler for PromptListRequest
+2026-07-31 00:10:53,026 - mcp.server.lowlevel.server - DEBUG - Registering handler for CallToolRequest
+2026-07-31 00:10:53,026 - mcp.server.lowlevel.server - DEBUG - Registering handler for SetLevelRequest
+2026-07-31 00:10:53,027 - asyncio - DEBUG - Using selector: EpollSelector
+2026-07-31 00:10:53,029 - httpx2 - INFO - HTTP Request: GET http://testserver/api/v1/.well-known/mcp.json "HTTP/1.1 200 OK"
+2026-07-31 00:10:53,030 - mcp.server.lowlevel.server - DEBUG - Initializing server 'test_server'
+2026-07-31 00:10:53,030 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListToolsRequest
+2026-07-31 00:10:53,031 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourcesRequest
+2026-07-31 00:10:53,031 - mcp.server.lowlevel.server - DEBUG - Registering handler for PromptListRequest
+2026-07-31 00:10:53,031 - mcp.server.lowlevel.server - DEBUG - Registering handler for CallToolRequest
+2026-07-31 00:10:53,031 - mcp.server.lowlevel.server - DEBUG - Registering handler for SetLevelRequest
+2026-07-31 00:10:53,033 - asyncio - DEBUG - Using selector: EpollSelector
+2026-07-31 00:10:53,035 - httpx2 - INFO - HTTP Request: GET http://testserver/api/v1/health "HTTP/1.1 200 OK"
+2026-07-31 00:12:22,191 - mcp.server.lowlevel.server - DEBUG - Initializing server 'test_server'
+2026-07-31 00:12:22,192 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListToolsRequest
+2026-07-31 00:12:22,192 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourcesRequest
+2026-07-31 00:12:22,192 - mcp.server.lowlevel.server - DEBUG - Registering handler for PromptListRequest
+2026-07-31 00:12:22,193 - mcp.server.lowlevel.server - DEBUG - Registering handler for CallToolRequest
+2026-07-31 00:12:22,193 - mcp.server.lowlevel.server - DEBUG - Registering handler for SetLevelRequest
+2026-07-31 00:12:22,196 - asyncio - DEBUG - Using selector: EpollSelector
+2026-07-31 00:12:22,201 - mcp.server.lowlevel.server - DEBUG - Initializing server 'test_server'
+2026-07-31 00:12:22,201 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListToolsRequest
+2026-07-31 00:12:22,201 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourcesRequest
+2026-07-31 00:12:22,202 - mcp.server.lowlevel.server - DEBUG - Registering handler for PromptListRequest
+2026-07-31 00:12:22,202 - mcp.server.lowlevel.server - DEBUG - Registering handler for CallToolRequest
+2026-07-31 00:12:22,202 - mcp.server.lowlevel.server - DEBUG - Registering handler for SetLevelRequest
+2026-07-31 00:12:22,203 - asyncio - DEBUG - Using selector: EpollSelector
+2026-07-31 00:12:22,205 - httpx2 - INFO - HTTP Request: GET http://testserver/api/v1/.well-known/mcp.json "HTTP/1.1 200 OK"
+2026-07-31 00:12:22,207 - mcp.server.lowlevel.server - DEBUG - Initializing server 'test_server'
+2026-07-31 00:12:22,207 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListToolsRequest
+2026-07-31 00:12:22,207 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourcesRequest
+2026-07-31 00:12:22,207 - mcp.server.lowlevel.server - DEBUG - Registering handler for PromptListRequest
+2026-07-31 00:12:22,208 - mcp.server.lowlevel.server - DEBUG - Registering handler for CallToolRequest
+2026-07-31 00:12:22,208 - mcp.server.lowlevel.server - DEBUG - Registering handler for SetLevelRequest
+2026-07-31 00:12:22,209 - asyncio - DEBUG - Using selector: EpollSelector
+2026-07-31 00:12:22,211 - httpx2 - INFO - HTTP Request: GET http://testserver/api/v1/health "HTTP/1.1 200 OK"
+2026-07-31 00:12:29,150 - mcp.server.lowlevel.server - DEBUG - Initializing server 'test_server'
+2026-07-31 00:12:29,150 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListToolsRequest
+2026-07-31 00:12:29,151 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourcesRequest
+2026-07-31 00:12:29,151 - mcp.server.lowlevel.server - DEBUG - Registering handler for PromptListRequest
+2026-07-31 00:12:29,151 - mcp.server.lowlevel.server - DEBUG - Registering handler for CallToolRequest
+2026-07-31 00:12:29,151 - mcp.server.lowlevel.server - DEBUG - Registering handler for SetLevelRequest
+2026-07-31 00:12:29,155 - asyncio - DEBUG - Using selector: EpollSelector
+2026-07-31 00:12:29,162 - mcp.server.lowlevel.server - DEBUG - Initializing server 'test_server'
+2026-07-31 00:12:29,163 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListToolsRequest
+2026-07-31 00:12:29,163 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourcesRequest
+2026-07-31 00:12:29,163 - mcp.server.lowlevel.server - DEBUG - Registering handler for PromptListRequest
+2026-07-31 00:12:29,163 - mcp.server.lowlevel.server - DEBUG - Registering handler for CallToolRequest
+2026-07-31 00:12:29,163 - mcp.server.lowlevel.server - DEBUG - Registering handler for SetLevelRequest
+2026-07-31 00:12:29,166 - asyncio - DEBUG - Using selector: EpollSelector
+2026-07-31 00:12:29,168 - httpx2 - INFO - HTTP Request: GET http://testserver/api/v1/.well-known/mcp.json "HTTP/1.1 200 OK"
+2026-07-31 00:12:29,170 - mcp.server.lowlevel.server - DEBUG - Initializing server 'test_server'
+2026-07-31 00:12:29,170 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListToolsRequest
+2026-07-31 00:12:29,171 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourcesRequest
+2026-07-31 00:12:29,171 - mcp.server.lowlevel.server - DEBUG - Registering handler for PromptListRequest
+2026-07-31 00:12:29,171 - mcp.server.lowlevel.server - DEBUG - Registering handler for CallToolRequest
+2026-07-31 00:12:29,171 - mcp.server.lowlevel.server - DEBUG - Registering handler for SetLevelRequest
+2026-07-31 00:12:29,172 - asyncio - DEBUG - Using selector: EpollSelector
+2026-07-31 00:12:29,174 - httpx2 - INFO - HTTP Request: GET http://testserver/api/v1/health "HTTP/1.1 200 OK"

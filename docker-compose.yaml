@@ -1,0 +1,16 @@
+services:
+  my_mcp_server:
+    build: .
+    container_name: my_mcp_server
+    ports:
+    - "8000:8000"
+    env_file:
+    - .env
+    networks:
+    - platform_network
+
+    restart: unless-stopped
+
+networks:
+  platform_network:
+    external: true

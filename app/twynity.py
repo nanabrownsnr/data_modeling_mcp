@@ -9,9 +9,9 @@ def register_routes(mcp):
         return JSONResponse({
             "name": settings.APP_TITLE,
             "version": settings.APP_VERSION
-        })
+        }, status_code=200) 
 
-    @mcp.custom_route("/api/v1/external-connection/me", methods=["GET"])
-    async def connection_status(request: Request) -> JSONResponse:
+    @mcp.custom_route("/api/v1/health", methods=["GET"])
+    async def health_status(request: Request) -> JSONResponse:
         headers = get_http_headers()
-        return JSONResponse({"connected": True})
+        return JSONResponse({"status": "ok"}, status_code=200)
